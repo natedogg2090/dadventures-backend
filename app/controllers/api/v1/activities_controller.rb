@@ -12,5 +12,20 @@ class Api::V1::ActivitiesController < ApplicationController
         render json: ActivitySerializer.new(activity), status: 200
     end
 
+    def create
+        activity = Acitivity.new(activity_params)
+
+        if activity.save
+            render json: ActivitySerializer(activity), status: 200
+        else
+            render json: {status: 'error', message: 'Please correct form errors.'}
+        end
+    end
+
+    private
+
+    def activity_params
+        params.require(:activity).permit(:name, :description, :duration, :what_you_need, :what_to_do)
+    end
 end
  
