@@ -1,0 +1,12 @@
+      invoke  active_record
+      create    db/migrate/20210411135924_create_memories.rb
+      create    app/models/memory.rb
+      invoke    test_unit
+      create      test/models/memory_test.rb
+      create      test/fixtures/memories.yml
+      invoke  controller
+      create    app/controllers/memories_controller.rb
+      invoke    test_unit
+      create      test/controllers/memories_controller_test.rb
+      invoke  resource_route
+       route    resources :memories

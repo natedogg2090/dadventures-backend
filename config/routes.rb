@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :memories
   namespace :api do
     namespace :v1 do
       resources :activities
