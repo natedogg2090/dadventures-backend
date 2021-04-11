@@ -8,4 +8,4 @@ user_three = User.create(name: "David", num_of_children: 3, ages_of_children: "2
 
 memory_one = Memory.create(description: "We had an amazing time!", activity_id: activity_one.id, user_id: user_one.id)
 memory_two = Memory.create(description: "This was so fun.", activity_id: activity_two.id, user_id: user_two.id)
-memory_three = Memory.create(description: "Dario was a little frightened by all the nighttime activity. Maybe save this one for when he is older.", activity_id: activity_three.id, user_id: user_three.id)
+memory_three = Memory.create(description: "Carl was a little frightened by all the nighttime activity. Maybe save this one for when he is older.", activity_id: activity_three.id, user_id: user_three.id)
