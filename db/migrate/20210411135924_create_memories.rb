@@ -3,6 +3,7 @@ class CreateMemories < ActiveRecord::Migration[6.1]
     create_table :memories do |t|
       t.string :description
       t.belongs_to :activity
+      t.belongs_to :user
 
       t.timestamps
     end
