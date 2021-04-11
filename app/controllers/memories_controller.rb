@@ -1,2 +1,0 @@
-class MemoriesController < ApplicationController
-end
