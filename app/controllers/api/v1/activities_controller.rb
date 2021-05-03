@@ -18,8 +18,13 @@ class Api::V1::ActivitiesController < ApplicationController
         if activity.save
             render json: ActivitySerializer(activity), status: 200
         else
-            render json: {status: 'error', message: 'Please correct form errors.'}
+            render json: {status: 'error', message: 'Unable to create activity.'}
         end
+    end
+
+    def destroy
+        activity = Activity.find(params[:id])
+        activity.destroy
     end
 
     private
