@@ -13,7 +13,7 @@ class Api::V1::ActivitiesController < ApplicationController
     end
 
     def create
-        activity = Acitivity.new(activity_params)
+        activity = Activity.new(activity_params)
 
         if activity.save
             render json: ActivitySerializer(activity), status: 200
