@@ -21,6 +21,13 @@ class Api::V1::MemoriesController < ApplicationController
         end
     end
 
+    def update
+        memory = Memory.find(params[:id])
+        memory.update(memory_params)
+
+        render json: MemorySerializer.new(memory), status: 200
+    end
+
     private
 
     def memory_params
