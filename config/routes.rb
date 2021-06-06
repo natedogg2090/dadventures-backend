@@ -2,9 +2,10 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :activities
+      resources :activities do
+        resources :memories
+      end
       resources :users
-      resources :memories
     end
   end
   
