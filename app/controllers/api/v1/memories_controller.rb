@@ -12,6 +12,7 @@ class Api::V1::MemoriesController < ApplicationController
     end
 
     def create
+        binding.pry
         memory = Memory.new(memory_params)
 
         if memory.save
@@ -31,6 +32,6 @@ class Api::V1::MemoriesController < ApplicationController
     private
 
     def memory_params
-        params.require(:memory).permit(:description)
+        params.require(:memory).permit(:description, :activity_id)
     end
 end

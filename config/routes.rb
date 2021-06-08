@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       resources :activities do
         resources :memories
       end
-      resources :users
+      # resources :users
     end
   end
   
