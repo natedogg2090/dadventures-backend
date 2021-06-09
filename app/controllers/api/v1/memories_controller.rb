@@ -12,7 +12,6 @@ class Api::V1::MemoriesController < ApplicationController
     end
 
     def create
-        binding.pry
         memory = Memory.new(memory_params)
 
         if memory.save
